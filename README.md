@@ -1,2 +1,2 @@
 # ShopEase
-An Ecommerce Website
+An Ecommerce Website (MERN)
