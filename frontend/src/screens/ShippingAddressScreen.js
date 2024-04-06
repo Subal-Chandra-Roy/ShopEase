@@ -23,9 +23,22 @@ export default function ShippingAddressScreen() {
 
   useEffect(() => {
     if (!userInfo) {
-      navigate("/signin?redirect=/shipping");;
+      navigate("/signin?redirect=/shipping");
     }
   }, [userInfo, navigate]);
+
+  //fetching the data after page refresh
+  useEffect(() => {
+    const savedShippingAddress = JSON.parse(localStorage.getItem("shippingAddress"));
+    if (savedShippingAddress) {
+      setFullName(savedShippingAddress.fullName || "");
+      setAddress(savedShippingAddress.address || "");
+      setCity(savedShippingAddress.city || "");
+      setPostalCode(savedShippingAddress.postalCode || "");
+      setCountry(savedShippingAddress.country || "");
+    }
+  }, []);
+
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -49,6 +62,7 @@ export default function ShippingAddressScreen() {
         country,
       })
     );
+    console.log("Shipping address saved to local storage"); // Check if shipping address is being saved
     navigate("/payment");
   };
   return (
