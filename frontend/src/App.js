@@ -29,6 +29,7 @@ import SearchScreen from "./screens/SearchScreen";
 import ProtectedRoute from "./components/ProtectedRoute";
 import DashboardScreen from "./screens/DashboardScreen";
 import AdminRoute from "./components/AdminRoute";
+import Footer from "./components/Footer";
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -205,7 +206,7 @@ function App() {
           </Container>
         </main>
         <footer>
-          <div className="text-center">All rights reserved</div>
+          <Footer/>
         </footer>
       </div>
     </BrowserRouter>

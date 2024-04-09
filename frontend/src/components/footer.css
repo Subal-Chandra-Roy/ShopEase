@@ -1,0 +1,44 @@
+.footer{
+    background: black;
+    width: 100%;
+    min-height: 100px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.social-icons, .menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+.menu a{
+    text-decoration: none;
+    margin: 2rem;
+    color: white;
+    transition: 0.5s;
+}
+.menu a:hover{
+    color: blueviolet;
+}
+li{
+    list-style: none;
+}
+.social-icons .fab {
+    font-size: 2rem;
+    color: white;
+    margin: 1rem;
+    display: inline-block;
+    transition: 0.5s;
+}
+.social-icons .fab:hover{
+    color: blue;
+    transform: translateX(-10px);
+}
+p{
+    color: white;
+    margin-top: 2rem;
+}
